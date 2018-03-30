@@ -7,15 +7,20 @@
 
 # hlsearch on (H) or off (h):
 ~h
+# Last Substitute Search Pattern:
+~MSle0~&#
+
 # Last Substitute String:
-$
+$###
 
 # Command Line History (newest to oldest):
 :x
+:%s/#/###/g
 :q
 :wa
 
 # Search String History (newest to oldest):
+? #
 ? @$
 
 # Expression History (newest to oldest):
@@ -37,24 +42,25 @@ $
 	0
 
 # File marks:
-'0  91  0  ~/bootstrap.sh
-'1  9  17  ~/.gitignore
-'2  73  0  ~/README.md
-'3  8  20  ~/.gitignore
-'4  8  0  ~/.git
-'5  1  0  ~/.gitignore
-'6  5  15  ~/producer.py
-'7  6  23  ~/producer.py
-'8  3  105  ~/producer.py
-'9  5  34  ~/consumer.py
+'0  82  0  ~/README.md
+'1  91  0  ~/bootstrap.sh
+'2  9  17  ~/.gitignore
+'3  73  0  ~/README.md
+'4  8  20  ~/.gitignore
+'5  8  0  ~/.git
+'6  1  0  ~/.gitignore
+'7  5  15  ~/producer.py
+'8  6  23  ~/producer.py
+'9  3  105  ~/producer.py
 
 # Jumplist (newest first):
+-'  82  0  ~/README.md
+-'  1  0  ~/README.md
 -'  91  0  ~/bootstrap.sh
 -'  1  0  ~/bootstrap.sh
 -'  9  17  ~/.gitignore
 -'  1  0  ~/.gitignore
 -'  73  0  ~/README.md
--'  1  0  ~/README.md
 -'  8  20  ~/.gitignore
 -'  8  0  ~/.git
 -'  5  15  ~/producer.py
@@ -145,9 +151,15 @@ $
 -'  45  8  ~/TestEventify.py
 -'  1  0  ~/TestEventify.py
 -'  45  8  ~/TestEventify.py
--'  1  0  ~/TestEventify.py
 
 # History of marks within files (newest to oldest):
+
+> ~/README.md
+	"	82	0
+	^	1	1
+	.	1	0
+	+	73	0
+	+	1	0
 
 > ~/bootstrap.sh
 	"	91	0
@@ -189,12 +201,6 @@ $
 	+	10	0
 	+	8	20
 	+	9	17
-
-> ~/README.md
-	"	73	0
-	^	73	1
-	.	73	0
-	+	73	0
 
 > ~/producer.py
 	"	5	15
