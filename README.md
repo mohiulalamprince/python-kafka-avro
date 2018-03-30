@@ -1,11 +1,11 @@
-###Install virtual box from internet
-###Then vagrant and I am using mac
+######Install virtual box from internet
+######Then vagrant and I am using mac
 
 vagrant init ubuntu/xenial:64
 vagrant up
 vagrant ssh
 
-###environment setup for kafka python
+######environment setup for kafka python
 sudo apt-get update -y
 sudp apt-get install docker.io
 
@@ -21,7 +21,7 @@ sudo easy_install greenlet -y
 sudo easy_install gevent -y
 
 
-###install docker compose
+######install docker compose
 sudo curl -L https://github.com/docker/compose/releases/download/1.20.1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 
 sudo chmod +x /usr/local/bin/docker-compose
@@ -29,7 +29,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 cd cp-docker-images/examples/kafka-single-node
 sudo docker-compose up
 
-###you need to install rdkafka for your kafka python development
+######you need to install rdkafka for your kafka python development
 curl -L https://github.com/edenhill/librdkafka/archive/v0.9.2-RC1.tar.gz | tar xzf -
 cd librdkafka-0.9.2-RC1/
 ./configure --prefix=/usr
@@ -37,38 +37,38 @@ make -j
 sudo make install
 
 
-###create a kafka topic using docker command
+######create a kafka topic using docker command
 sudo docker-compose exec kafka  \
 kafka-topics --create --topic mytopic --partitions 1 --replication-factor 1 --if-not-exists --zookeeper localhost:32181
 
 
-###check the status/description
+######check the status/description
 sudo docker-compose exec kafka  \
   kafka-topics --describe --topic mytopic --zookeeper localhost:32181
 
 
-###generate some messages 
+######generate some messages 
 sudo docker-compose exec kafka  \
   bash -c "seq 42 | kafka-console-producer --request-required-acks 1 --broker-list localhost:29092 --topic mytopic && echo 'Produced 42 messages.'"
 
-###consume some message what you have ever pushed in kafka mytopic
+######consume some message what you have ever pushed in kafka mytopic
 sudo docker-compose exec kafka  \
   kafka-console-consumer --bootstrap-server localhost:29092 --topic mytopic --from-beginning --max-messages 42  
 
 
-###need to install virtualenv for python development
+######need to install virtualenv for python development
 sudo pip install virtualenv
 virtualenv env
 
-###activate your environment
+######activate your environment
 source env/bin/activate
 
 
-###install confluent kafka for your development
+######install confluent kafka for your development
 pip install confluent-kafka
 
 
-###Lets see what can be done with this two sample code
+######Lets see what can be done with this two sample code
 python producer.py
 python consumer.py
 
@@ -79,7 +79,7 @@ user    0m0.184s
 sys     0m0.036s
 
 
-###kafka schema registry using docker container
+######kafka schema registry using docker container
 sudo docker run -d \
   --net=host \
   --name=schema-registry \

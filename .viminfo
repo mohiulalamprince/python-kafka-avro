@@ -8,18 +8,20 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Substitute Search Pattern:
-~MSle0~&#
+~MSle0~&###
 
 # Last Substitute String:
-$###
+$######
 
 # Command Line History (newest to oldest):
 :x
+:%s/###/######/g
 :%s/#/###/g
 :q
 :wa
 
 # Search String History (newest to oldest):
+? ###
 ? #
 ? @$
 
@@ -150,7 +152,6 @@ $###
 -'  1  0  ~/cp-docker-images/examples/kafka-single-node/docker-compose.yml
 -'  45  8  ~/TestEventify.py
 -'  1  0  ~/TestEventify.py
--'  45  8  ~/TestEventify.py
 
 # History of marks within files (newest to oldest):
 
