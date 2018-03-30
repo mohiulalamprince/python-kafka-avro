@@ -15,12 +15,12 @@ $##
 
 # Command Line History (newest to oldest):
 :x
+:wa
+:q
 :%s/####/##/g
 :%s/######/####/g
 :%s/###/######/g
 :%s/#/###/g
-:q
-:wa
 
 # Search String History (newest to oldest):
 ? ####
@@ -37,7 +37,9 @@ $##
 
 # Registers:
 ""0	LINE	0
-	cp-docker-images/README.md
+	@app.route("/order")
+	def hello():
+	    return "Hey I'm using Docker!"
 "1	LINE	0
 	
 "2	LINE	0
@@ -48,21 +50,39 @@ $##
 	0
 
 # File marks:
-'0  82  0  ~/README.md
-'1  91  0  ~/README.md
-'2  91  0  ~/bootstrap.sh
-'3  9  17  ~/.gitignore
-'4  73  0  ~/README.md
-'5  8  20  ~/.gitignore
-'6  8  0  ~/.git
-'7  1  0  ~/.gitignore
-'8  5  15  ~/producer.py
-'9  6  23  ~/producer.py
+'0  110  0  ~/README.md
+'1  7  8  ~/docker-flask-project/app/main.py
+'2  1  0  ~/docker-flask-project/Dockerfile
+'3  3  0  ~/docker-flask-project/app/main.py
+'4  3  28  ~/cp-docker-images/examples/kafka-single-node/AvroProducer.py
+'5  1  0  ~/cp-docker-images/examples/kafka-single-node/AvroPo
+'6  33  8  ~/cp-docker-images/examples/kafka-single-node/AvroConsumer.py
+'7  7  40  ~/cp-docker-images/examples/kafka-single-node/AvroConsumer.py
+'8  40  48  ~/cp-docker-images/examples/kafka-single-node/AvroProducer.py
+'9  43  30  ~/cp-docker-images/examples/kafka-single-node/AvroProducer.py
 
 # Jumplist (newest first):
--'  82  0  ~/README.md
+-'  110  0  ~/README.md
 -'  1  0  ~/README.md
--'  91  0  ~/README.md
+-'  7  8  ~/docker-flask-project/app/main.py
+-'  1  0  ~/docker-flask-project/app/main.py
+-'  1  0  ~/docker-flask-project/Dockerfile
+-'  3  0  ~/docker-flask-project/app/main.py
+-'  3  28  ~/cp-docker-images/examples/kafka-single-node/AvroProducer.py
+-'  1  0  ~/cp-docker-images/examples/kafka-single-node/AvroProducer.py
+-'  1  0  ~/cp-docker-images/examples/kafka-single-node/AvroPo
+-'  33  8  ~/cp-docker-images/examples/kafka-single-node/AvroConsumer.py
+-'  1  0  ~/cp-docker-images/examples/kafka-single-node/AvroConsumer.py
+-'  7  40  ~/cp-docker-images/examples/kafka-single-node/AvroConsumer.py
+-'  40  48  ~/cp-docker-images/examples/kafka-single-node/AvroProducer.py
+-'  43  30  ~/cp-docker-images/examples/kafka-single-node/AvroProducer.py
+-'  4  0  ~/docker-flask-project/Dockerfile
+-'  10  47  ~/app/main.py
+-'  1  0  ~/app/main.py
+-'  2  0  ~/requirements.txt
+-'  1  0  ~/requirements.txt
+-'  82  0  ~/README.md
+-'  92  0  ~/README.md
 -'  91  0  ~/bootstrap.sh
 -'  1  0  ~/bootstrap.sh
 -'  9  17  ~/.gitignore
@@ -139,30 +159,13 @@ $##
 -'  1  0  ~/cp-docker-images/examples/kafka-single-node/docker-compose.yml
 -'  45  8  ~/TestEventify.py
 -'  1  0  ~/TestEventify.py
--'  45  8  ~/TestEventify.py
--'  1  0  ~/TestEventify.py
--'  25  0  ~/cp-docker-images/examples/kafka-single-node/docker-compose.yml
--'  1  0  ~/cp-docker-images/examples/kafka-single-node/docker-compose.yml
--'  45  8  ~/TestEventify.py
--'  1  0  ~/TestEventify.py
--'  45  8  ~/TestEventify.py
--'  1  0  ~/TestEventify.py
--'  25  0  ~/cp-docker-images/examples/kafka-single-node/docker-compose.yml
--'  1  0  ~/cp-docker-images/examples/kafka-single-node/docker-compose.yml
--'  45  8  ~/TestEventify.py
--'  1  0  ~/TestEventify.py
--'  45  8  ~/TestEventify.py
--'  1  0  ~/TestEventify.py
--'  25  0  ~/cp-docker-images/examples/kafka-single-node/docker-compose.yml
--'  1  0  ~/cp-docker-images/examples/kafka-single-node/docker-compose.yml
--'  45  8  ~/TestEventify.py
 
 # History of marks within files (newest to oldest):
 
 > ~/README.md
-	"	82	0
-	^	91	1
-	.	1	0
+	"	110	0
+	^	110	0
+	.	109	0
 	+	73	0
 	+	1	6
 	+	2	6
@@ -179,6 +182,67 @@ $##
 	+	71	6
 	+	82	6
 	+	1	0
+	+	108	24
+	+	91	20
+	+	95	15
+	+	106	22
+	+	109	0
+
+> ~/docker-flask-project/app/main.py
+	"	7	8
+	^	7	9
+	.	7	8
+	+	6	17
+	+	9	0
+	+	10	13
+	+	8	32
+	+	2	29
+	+	7	8
+
+> ~/docker-flask-project/Dockerfile
+	"	1	0
+	^	1	1
+	.	1	0
+	+	3	0
+	+	1	0
+	+	2	4
+	+	1	0
+
+> ~/cp-docker-images/examples/kafka-single-node/AvroProducer.py
+	"	3	28
+	^	3	29
+	.	3	28
+	+	44	0
+	+	39	40
+	+	40	49
+	+	43	30
+	+	40	48
+	+	35	38
+	+	3	28
+
+> ~/cp-docker-images/examples/kafka-single-node/AvroPo
+	"	1	0
+
+> ~/cp-docker-images/examples/kafka-single-node/AvroConsumer.py
+	"	33	8
+	^	9	44
+	.	9	43
+	+	33	0
+	+	11	16
+	+	7	40
+	+	9	43
+
+> ~/app/main.py
+	"	10	47
+	^	10	48
+	.	10	47
+	+	10	47
+
+> ~/requirements.txt
+	"	2	0
+	^	2	0
+	.	1	13
+	+	1	13
 
 > ~/bootstrap.sh
 	"	91	0

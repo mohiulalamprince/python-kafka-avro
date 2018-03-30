@@ -88,4 +88,23 @@ sudo docker run -d \
   -e SCHEMA_REGISTRY_LISTENERS=http://localhost:8081 \
   confluentinc/cp-schema-registry:4.0.0  
 
- 
+## mysql installation
+sudo docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:5.6
+
+
+## REST api apps
+mkdir docker-flask-project && cd docker-flask-project
+touch Dockerfile 
+
+paste inside Docker file 
+'
+FROM tiangolo/uwsgi-nginx-flask:flask
+
+COPY ./app /app
+'
+
+## REST api using flask
+sudo docker build -t simple-flask .
+sudo docker run -p 80:80 -t simple-flask 
+
+
