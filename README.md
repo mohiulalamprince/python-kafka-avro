@@ -36,6 +36,11 @@ cd librdkafka-0.9.2-RC1/
 make -j
 sudo make install
 
+## docker image
+
+git clone https://github.com/confluentinc/cp-docker-images
+cp *.py cp-docker-images/example/kafka-single-node/
+
 
 ## create a kafka topic using docker command
 sudo docker-compose exec kafka  \
