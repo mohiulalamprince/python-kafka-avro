@@ -44,20 +44,21 @@ $######
 	0
 
 # File marks:
-'0  82  0  ~/README.md
-'1  91  0  ~/bootstrap.sh
-'2  9  17  ~/.gitignore
-'3  73  0  ~/README.md
-'4  8  20  ~/.gitignore
-'5  8  0  ~/.git
-'6  1  0  ~/.gitignore
-'7  5  15  ~/producer.py
-'8  6  23  ~/producer.py
-'9  3  105  ~/producer.py
+'0  91  0  ~/README.md
+'1  82  0  ~/README.md
+'2  91  0  ~/bootstrap.sh
+'3  9  17  ~/.gitignore
+'4  73  0  ~/README.md
+'5  8  20  ~/.gitignore
+'6  8  0  ~/.git
+'7  1  0  ~/.gitignore
+'8  5  15  ~/producer.py
+'9  6  23  ~/producer.py
 
 # Jumplist (newest first):
--'  82  0  ~/README.md
+-'  91  0  ~/README.md
 -'  1  0  ~/README.md
+-'  82  0  ~/README.md
 -'  91  0  ~/bootstrap.sh
 -'  1  0  ~/bootstrap.sh
 -'  9  17  ~/.gitignore
@@ -156,11 +157,24 @@ $######
 # History of marks within files (newest to oldest):
 
 > ~/README.md
-	"	82	0
-	^	1	1
-	.	1	0
+	"	91	0
+	^	91	1
+	.	82	6
 	+	73	0
-	+	1	0
+	+	1	6
+	+	2	6
+	+	8	6
+	+	24	6
+	+	32	6
+	+	40	6
+	+	45	6
+	+	50	6
+	+	54	6
+	+	59	6
+	+	63	6
+	+	67	6
+	+	71	6
+	+	82	6
 
 > ~/bootstrap.sh
 	"	91	0
