@@ -8,13 +8,14 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Substitute Search Pattern:
-~MSle0~&######
+~MSle0~&####
 
 # Last Substitute String:
-$####
+$##
 
 # Command Line History (newest to oldest):
 :x
+:%s/####/##/g
 :%s/######/####/g
 :%s/###/######/g
 :%s/#/###/g
@@ -22,6 +23,7 @@ $####
 :wa
 
 # Search String History (newest to oldest):
+? ####
 ? ######
 ? ###
 ? #
@@ -59,7 +61,7 @@ $####
 
 # Jumplist (newest first):
 -'  82  0  ~/README.md
--'  1  4  ~/README.md
+-'  1  0  ~/README.md
 -'  91  0  ~/README.md
 -'  91  0  ~/bootstrap.sh
 -'  1  0  ~/bootstrap.sh
