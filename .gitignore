@@ -1,3 +1,13 @@
-cp-docker-images/*
+cp-docker-images/bin/*
+cp-docker-images/debian/*
+cp-docker-images/docs/*
+cp-docker-images/java/*
+cp-docker-images/LICENSE
+cp-docker-images/Makefile
+cp-docker-images/README.md
+cp-docker-images/test
+
+
+
 env/*
 librdkafka-0.9.2-RC1/*

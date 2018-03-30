@@ -7,11 +7,16 @@
 
 # hlsearch on (H) or off (h):
 ~h
+# Last Substitute String:
+$
+
 # Command Line History (newest to oldest):
 :x
+:q
 :wa
 
 # Search String History (newest to oldest):
+? @$
 
 # Expression History (newest to oldest):
 
@@ -20,32 +25,38 @@
 # Input Line History (newest to oldest):
 
 # Registers:
-"0	CHAR	0
-	'hello world1
+""0	LINE	0
+	cp-docker-images/README.md
 "1	LINE	0
-	producer.py
+	
 "2	LINE	0
+	producer.py
+"3	LINE	0
 	consumer.py
-""-	CHAR	0
+"-	CHAR	0
 	0
 
 # File marks:
-'0  5  15  ~/producer.py
-'1  6  23  ~/producer.py
-'2  1  17  ~/.gitignore
-'3  3  105  ~/producer.py
-'4  5  34  ~/consumer.py
-'5  8  44  ~/producer.py
-'6  1  0  ~/producer.py
-'7  1  0  ~/consumer.py
-'8  6  0  ~/consumer.py
-'9  26  8  ~/consumer.py
+'0  8  20  ~/.gitignore
+'1  8  0  ~/.git
+'2  1  0  ~/.gitignore
+'3  72  0  ~/bootstrap.sh
+'4  5  15  ~/producer.py
+'5  6  23  ~/producer.py
+'6  3  105  ~/producer.py
+'7  5  34  ~/consumer.py
+'8  8  44  ~/producer.py
+'9  1  0  ~/producer.py
 
 # Jumplist (newest first):
+-'  8  20  ~/.gitignore
+-'  1  0  ~/.gitignore
+-'  8  0  ~/.git
+-'  72  0  ~/bootstrap.sh
+-'  1  0  ~/bootstrap.sh
 -'  5  15  ~/producer.py
 -'  1  0  ~/producer.py
 -'  6  23  ~/producer.py
--'  1  17  ~/.gitignore
 -'  3  105  ~/producer.py
 -'  5  34  ~/consumer.py
 -'  1  0  ~/consumer.py
@@ -136,11 +147,36 @@
 -'  1  0  ~/cp-docker-images/examples/kafka-single-node/docker-compose.yml
 -'  45  8  ~/TestEventify.py
 -'  5  34  ~/consumer.py
--'  1  0  ~/consumer.py
--'  6  0  ~/consumer.py
--'  1  17  ~/.gitignore
 
 # History of marks within files (newest to oldest):
+
+> ~/.gitignore
+	"	8	20
+	^	8	21
+	.	8	20
+	+	1	0
+	+	14	0
+	+	13	21
+	+	12	4
+	+	1	22
+	+	2	25
+	+	3	0
+	+	4	0
+	+	5	0
+	+	6	0
+	+	3	20
+	+	4	20
+	+	5	24
+	+	6	25
+	+	7	26
+	+	10	0
+	+	8	20
+
+> ~/bootstrap.sh
+	"	72	0
+	^	72	1
+	.	72	0
+	+	72	0
 
 > ~/producer.py
 	"	5	15
@@ -154,16 +190,6 @@
 	+	3	105
 	+	6	23
 	+	5	15
-
-> ~/.gitignore
-	"	1	17
-	^	1	18
-	.	1	17
-	+	1	0
-	+	4	0
-	+	3	21
-	+	2	4
-	+	1	17
 
 > ~/consumer.py
 	"	5	34
