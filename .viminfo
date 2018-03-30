@@ -37,20 +37,23 @@ $
 	0
 
 # File marks:
-'0  8  20  ~/.gitignore
-'1  8  0  ~/.git
-'2  1  0  ~/.gitignore
-'3  72  0  ~/bootstrap.sh
-'4  5  15  ~/producer.py
-'5  6  23  ~/producer.py
-'6  3  105  ~/producer.py
-'7  5  34  ~/consumer.py
-'8  8  44  ~/producer.py
-'9  1  0  ~/producer.py
+'0  9  17  ~/.gitignore
+'1  73  0  ~/README.md
+'2  8  20  ~/.gitignore
+'3  8  0  ~/.git
+'4  1  0  ~/.gitignore
+'5  72  0  ~/bootstrap.sh
+'6  5  15  ~/producer.py
+'7  6  23  ~/producer.py
+'8  3  105  ~/producer.py
+'9  5  34  ~/consumer.py
 
 # Jumplist (newest first):
--'  8  20  ~/.gitignore
+-'  9  17  ~/.gitignore
 -'  1  0  ~/.gitignore
+-'  73  0  ~/README.md
+-'  1  0  ~/README.md
+-'  8  20  ~/.gitignore
 -'  8  0  ~/.git
 -'  72  0  ~/bootstrap.sh
 -'  1  0  ~/bootstrap.sh
@@ -143,17 +146,13 @@ $
 -'  1  0  ~/TestEventify.py
 -'  45  8  ~/TestEventify.py
 -'  1  0  ~/TestEventify.py
--'  25  0  ~/cp-docker-images/examples/kafka-single-node/docker-compose.yml
--'  1  0  ~/cp-docker-images/examples/kafka-single-node/docker-compose.yml
--'  45  8  ~/TestEventify.py
--'  5  34  ~/consumer.py
 
 # History of marks within files (newest to oldest):
 
 > ~/.gitignore
-	"	8	20
-	^	8	21
-	.	8	20
+	"	9	17
+	^	9	18
+	.	9	17
 	+	1	0
 	+	14	0
 	+	13	21
@@ -171,6 +170,13 @@ $
 	+	7	26
 	+	10	0
 	+	8	20
+	+	9	17
+
+> ~/README.md
+	"	73	0
+	^	73	1
+	.	73	0
+	+	73	0
 
 > ~/bootstrap.sh
 	"	72	0

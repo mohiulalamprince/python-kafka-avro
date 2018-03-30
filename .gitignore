@@ -6,7 +6,7 @@ cp-docker-images/LICENSE
 cp-docker-images/Makefile
 cp-docker-images/README.md
 cp-docker-images/test
-
+cp-docker-images/*
 
 
 env/*
