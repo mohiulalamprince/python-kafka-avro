@@ -36,8 +36,8 @@ $
 :%s/#/###/g
 
 # Search String History (newest to oldest):
-?/logg
 ? @$
+?/logg
 ? overlay
 ? host
 ? bridge
@@ -54,8 +54,8 @@ $
 # Input Line History (newest to oldest):
 
 # Registers:
-"0	LINE	0
-	                return False, "SMTP_SERVER not found"
+""0	CHAR	0
+	 
 "1	LINE	0
 		data = str(json.loads(msg.value)['orderstatus'])
 "2	LINE	0
@@ -82,24 +82,26 @@ $
 		print sys.exec_info()[1]
 "9	LINE	0
 		import sys
-""-	CHAR	0
+"-	CHAR	0
 	 
 
 # File marks:
-'0  116  50  ~/README.md
-'1  33  28  ~/docker-flask-project/app/consumer.py
-'2  34  10  ~/docker-flask-project/app/consumer.py
-'3  17  0  ~/docker-flask-project/app/main.py
-'4  36  84  ~/docker-flask-project/app/consumer.py
-'5  22  62  ~/docker-flask-project/app/consumer.py
-'6  22  89  ~/docker-flask-project/app/consumer.py
-'7  14  24  ~/docker-flask-project/app/EmailManager.py
-'8  4  0  ~/docker-flask-project/app/TestMaria.py
-'9  22  0  ~/docker-flask-project/app/consumer.py
+'0  156  0  ~/README.md
+'1  8  0  ~/docker-flask-project
+'2  116  50  ~/README.md
+'3  33  28  ~/docker-flask-project/app/consumer.py
+'4  34  10  ~/docker-flask-project/app/consumer.py
+'5  17  0  ~/docker-flask-project/app/main.py
+'6  36  84  ~/docker-flask-project/app/consumer.py
+'7  22  62  ~/docker-flask-project/app/consumer.py
+'8  22  89  ~/docker-flask-project/app/consumer.py
+'9  14  24  ~/docker-flask-project/app/EmailManager.py
 
 # Jumplist (newest first):
--'  116  50  ~/README.md
+-'  156  0  ~/README.md
 -'  1  0  ~/README.md
+-'  8  0  ~/docker-flask-project
+-'  116  50  ~/README.md
 -'  33  28  ~/docker-flask-project/app/consumer.py
 -'  1  0  ~/docker-flask-project/app/consumer.py
 -'  34  10  ~/docker-flask-project/app/consumer.py
@@ -152,7 +154,6 @@ $
 -'  1  0  ~/docker-flask-project/app/requirements.txt
 -'  7  0  ~/.git
 -'  25  0  ~/.git
--'  1  0  ~/docker-flask-project
 -'  13  0  ~/docker-flask-project/app/requirements.txt
 -'  25  0  ~/cp-docker-images/examples/kafka-single-node/docker-compose.yml
 -'  1  0  ~/cp-docker-images/examples/kafka-single-node/docker-compose.yml
@@ -194,14 +195,13 @@ $
 -'  1  0  ~/app/main.py
 -'  2  0  ~/requirements.txt
 -'  1  0  ~/requirements.txt
--'  82  0  ~/README.md
 
 # History of marks within files (newest to oldest):
 
 > ~/README.md
-	"	116	50
-	^	116	51
-	.	116	50
+	"	156	0
+	^	156	0
+	.	155	0
 	+	78	0
 	+	1	6
 	+	2	6
@@ -227,6 +227,7 @@ $
 	+	43	0
 	+	148	109
 	+	116	50
+	+	155	0
 
 > ~/docker-flask-project/app/consumer.py
 	"	33	28

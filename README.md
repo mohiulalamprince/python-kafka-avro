@@ -147,3 +147,10 @@ sudo docker run \
 
 sudo docker run --name mysql-client -it --link db:mysql --rm mariadb sh -c 'exec mysql -uroot -ptest -hmysql'
 
+show databases;
+create database testdb;
+use testdb;
+show tables;
+MariaDB [testdb]> create table shipmentorder(order_id INT NOT NULL AUTO_INCREMENT, orderstatus VARCHAR(64) NOT NULL, PRIMARY KEY(order_id));
+
+
