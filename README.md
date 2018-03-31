@@ -2,22 +2,28 @@
 ## Then vagrant and I am using mac
 
 vagrant init ubuntu/xenial:64
+
 vagrant up
+
 vagrant ssh
 
 ## environment setup for kafka python
 sudo apt-get update -y
+
 sudp apt-get install docker.io
 
 docker run -d -p 6379:6379 -t redis:latest
+
 docker run --name postgres-container -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword -d postgres
 
 sudo apt-get install python-pip -y
+
 sudo apt-get install python-dev -y
 
 sudo apt-get install build-essential autoconf libtool pkg-config python-opengl python-imaging python-pyrex python-pyside.qtopengl idle-python2.7 qt4-dev-tools qt4-designer libqtgui4 libqtcore4 libqt4-xml libqt4-test libqt4-script libqt4-network libqt4-dbus python-qt4 python-qt4-gl libgle3 python-dev libssl-dev -y
 
 sudo easy_install greenlet -y
+
 sudo easy_install gevent -y
 
 
@@ -27,18 +33,24 @@ sudo curl -L https://github.com/docker/compose/releases/download/1.20.1/docker-c
 sudo chmod +x /usr/local/bin/docker-compose
 
 cd cp-docker-images/examples/kafka-single-node
+
 sudo docker-compose up
 
 ## you need to install rdkafka for your kafka python development
 curl -L https://github.com/edenhill/librdkafka/archive/v0.9.2-RC1.tar.gz | tar xzf -
+
 cd librdkafka-0.9.2-RC1/
+
 ./configure --prefix=/usr
+
 make -j
+
 sudo make install
 
 ## docker image
 
 git clone https://github.com/confluentinc/cp-docker-images
+
 cp *.py cp-docker-images/example/kafka-single-node/
 
 
@@ -63,6 +75,7 @@ sudo docker-compose exec kafka  \
 
 ## need to install virtualenv for python development
 sudo pip install virtualenv
+
 virtualenv env
 
 ## activate your environment
@@ -75,6 +88,7 @@ pip install confluent-kafka
 
 ## Lets see what can be done with this two sample code
 python producer.py
+
 python consumer.py
 
 (env) vagrant@ubuntu-xenial:~$ time python producer.py 
@@ -99,9 +113,11 @@ sudo docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:5
 
 ## REST api apps
 mkdir docker-flask-project && cd docker-flask-project
+
 touch Dockerfile 
 
 paste inside Docker file 
+
 '
 FROM tiangolo/uwsgi-nginx-flask:flask
 
@@ -123,11 +139,14 @@ RUN pip install -r requirements.txt
 '
 
 ## REST api using flask
+
 sudo docker build -t simple-flask .
+
 sudo docker run -p 80:80 -t simple-flask 
 
 
 ## how to run kafka using docker not docker-compose
+
 sudo docker run -d \
     --net=host \
     --name=kafka \
@@ -160,6 +179,7 @@ sudo docker run \
 ## MYSQL 
 
 sudo docker --name db -e MYSQL_ROOT_PASSWORD=test -d -p 3306:3306 mariadb
+
 sudo docker run --name mysql-client -it --link db:mysql --rm mariadb sh -c 'exec mysql -uroot -ptest -hmysql'
 
 show databases;
@@ -175,17 +195,21 @@ MariaDB [testdb]> create table shipmentorder(order_id INT NOT NULL AUTO_INCREMEN
 ## How to run the flask app from the console
 
 cd docker-flask-project/app/
+
 flask run
 
 
 ## How to run the consumer
 source env/bin/activate
+
 cd docker-flask-project/app
+
 python consumer
 
 ## How to check the basic features
 
 curl 127.0.0.1:5000
+
 curl -H "Content-type: application/json" -X POST http://127.0.0.1:5000/order -d '{"orderstatus":"shipped"}'
 
 
