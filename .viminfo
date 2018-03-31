@@ -86,7 +86,7 @@ $
 	 
 
 # File marks:
-'0  156  0  ~/README.md
+'0  160  0  ~/README.md
 '1  8  0  ~/docker-flask-project
 '2  116  50  ~/README.md
 '3  33  28  ~/docker-flask-project/app/consumer.py
@@ -98,7 +98,7 @@ $
 '9  14  24  ~/docker-flask-project/app/EmailManager.py
 
 # Jumplist (newest first):
--'  156  0  ~/README.md
+-'  160  0  ~/README.md
 -'  1  0  ~/README.md
 -'  8  0  ~/docker-flask-project
 -'  116  50  ~/README.md
@@ -194,14 +194,13 @@ $
 -'  10  47  ~/app/main.py
 -'  1  0  ~/app/main.py
 -'  2  0  ~/requirements.txt
--'  1  0  ~/requirements.txt
 
 # History of marks within files (newest to oldest):
 
 > ~/README.md
-	"	156	0
-	^	156	0
-	.	155	0
+	"	160	0
+	^	160	0
+	.	157	0
 	+	78	0
 	+	1	6
 	+	2	6
@@ -227,7 +226,11 @@ $
 	+	43	0
 	+	148	109
 	+	116	50
+	+	159	0
+	+	151	0
+	+	153	0
 	+	155	0
+	+	157	0
 
 > ~/docker-flask-project/app/consumer.py
 	"	33	28
