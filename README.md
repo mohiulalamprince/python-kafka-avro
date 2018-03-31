@@ -192,6 +192,40 @@ show tables;
 
 MariaDB [testdb]> create table shipmentorder(order_id INT NOT NULL AUTO_INCREMENT, orderstatus VARCHAR(64) NOT NULL, PRIMARY KEY(order_id));
 
+## How to configure email server
+
+You have to go to the source code to change your smtp server and port, sender username and password
+
+vim docker-flask-project/app/EmailManager.py
+
+import threading
+
+class EmailThread(threading.Thread):
+
+    def __init__(self, email, subject, body):
+
+        threading.Thread.__init__(self)
+
+        self.email = email
+
+        self.subject = subject
+
+        self.body = body
+
+    def run(self):
+
+        try:
+
+            username = ""
+
+            password = ""
+
+            SMTP_SERVER = ""
+
+	    SMTP_SERVER_PORT = 0 
+
+
+
 ## How to run the flask app from the console
 
 cd docker-flask-project/app/
