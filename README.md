@@ -105,7 +105,21 @@ paste inside Docker file
 '
 FROM tiangolo/uwsgi-nginx-flask:flask
 
+
+RUN apt-get update -y                                                                                                                                           [1/517]
+                                                                                                                                                                       
+RUN apt-get install -y python-pip telnet
+
 COPY ./app /app
+WORKDIR /app
+
+RUN curl -L https://github.com/edenhill/librdkafka/archive/v0.9.2-RC1.tar.gz | tar xzf - && \
+cd librdkafka-0.9.2-RC1/ && \
+./configure --prefix=/usr && \
+make -j && \
+make install
+
+RUN pip install -r requirements.txt
 '
 
 ## REST api using flask

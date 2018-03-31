@@ -54,21 +54,25 @@ $
 # Input Line History (newest to oldest):
 
 # Registers:
-""0	CHAR	0
+"0	CHAR	0
 	 
-"1	LINE	0
-		data = str(json.loads(msg.value)['orderstatus'])
+""1	LINE	0
+	'
 "2	LINE	0
-		print data
+	COPY ./app /app
 "3	LINE	0
-	
+		data = str(json.loads(msg.value)['orderstatus'])
 "4	LINE	0
-	
+		print data
 "5	LINE	0
-		data = str(json.loads(json.dumps(msg.value)['orderstatus']))
+	
 "6	LINE	0
-			data =  at " + str(datetime.utcnow()) 
+	
 "7	LINE	0
+		data = str(json.loads(json.dumps(msg.value)['orderstatus']))
+"8	LINE	0
+			data =  at " + str(datetime.utcnow()) 
+"9	LINE	0
 	    try:
 		print "writing inside mysql"
 	    	engine = create_engine("mysql+pymysql://root:test@localhost/testdb?host=localhost?port=3306")
@@ -78,30 +82,27 @@ $
 		print "writing end inside mysql"
 	    except:
 		print "exception inside mysql"
-"8	LINE	0
-		print sys.exec_info()[1]
-"9	LINE	0
-		import sys
 "-	CHAR	0
 	 
 
 # File marks:
-'0  160  0  ~/README.md
-'1  8  0  ~/docker-flask-project
-'2  116  50  ~/README.md
-'3  33  28  ~/docker-flask-project/app/consumer.py
-'4  34  10  ~/docker-flask-project/app/consumer.py
-'5  17  0  ~/docker-flask-project/app/main.py
-'6  36  84  ~/docker-flask-project/app/consumer.py
-'7  22  62  ~/docker-flask-project/app/consumer.py
-'8  22  89  ~/docker-flask-project/app/consumer.py
-'9  14  24  ~/docker-flask-project/app/EmailManager.py
+'0  123  0  ~/README.md
+'1  174  0  ~/README.md
+'2  8  0  ~/docker-flask-project
+'3  130  50  ~/README.md
+'4  33  28  ~/docker-flask-project/app/consumer.py
+'5  34  10  ~/docker-flask-project/app/consumer.py
+'6  17  0  ~/docker-flask-project/app/main.py
+'7  36  84  ~/docker-flask-project/app/consumer.py
+'8  22  62  ~/docker-flask-project/app/consumer.py
+'9  22  89  ~/docker-flask-project/app/consumer.py
 
 # Jumplist (newest first):
--'  160  0  ~/README.md
+-'  123  0  ~/README.md
 -'  1  0  ~/README.md
+-'  174  0  ~/README.md
 -'  8  0  ~/docker-flask-project
--'  116  50  ~/README.md
+-'  130  50  ~/README.md
 -'  33  28  ~/docker-flask-project/app/consumer.py
 -'  1  0  ~/docker-flask-project/app/consumer.py
 -'  34  10  ~/docker-flask-project/app/consumer.py
@@ -194,13 +195,14 @@ $
 -'  10  47  ~/app/main.py
 -'  1  0  ~/app/main.py
 -'  2  0  ~/requirements.txt
+-'  160  0  ~/README.md
 
 # History of marks within files (newest to oldest):
 
 > ~/README.md
-	"	160	0
-	^	160	0
-	.	157	0
+	"	123	0
+	^	123	1
+	.	123	0
 	+	78	0
 	+	1	6
 	+	2	6
@@ -217,20 +219,23 @@ $
 	+	76	6
 	+	87	6
 	+	1	0
-	+	113	24
+	+	127	24
 	+	96	20
 	+	100	15
-	+	111	22
-	+	114	0
+	+	125	22
+	+	128	0
 	+	42	51
 	+	43	0
-	+	148	109
-	+	116	50
-	+	159	0
-	+	151	0
-	+	153	0
-	+	155	0
-	+	157	0
+	+	162	109
+	+	130	50
+	+	173	0
+	+	165	0
+	+	167	0
+	+	169	0
+	+	171	0
+	+	122	35
+	+	108	0
+	+	123	0
 
 > ~/docker-flask-project/app/consumer.py
 	"	33	28
