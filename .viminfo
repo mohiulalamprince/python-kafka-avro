@@ -78,23 +78,24 @@ $
 	 
 
 # File marks:
-'0  190  0  ~/README.md
-'1  188  25  ~/README.md
-'2  123  0  ~/README.md
-'3  174  0  ~/README.md
-'4  8  0  ~/docker-flask-project
-'5  130  50  ~/README.md
-'6  33  28  ~/docker-flask-project/app/consumer.py
-'7  34  10  ~/docker-flask-project/app/consumer.py
-'8  17  0  ~/docker-flask-project/app/main.py
-'9  36  84  ~/docker-flask-project/app/consumer.py
+'0  162  72  ~/README.md
+'1  191  0  ~/README.md
+'2  189  25  ~/README.md
+'3  123  0  ~/README.md
+'4  175  0  ~/README.md
+'5  8  0  ~/docker-flask-project
+'6  130  50  ~/README.md
+'7  33  28  ~/docker-flask-project/app/consumer.py
+'8  34  10  ~/docker-flask-project/app/consumer.py
+'9  17  0  ~/docker-flask-project/app/main.py
 
 # Jumplist (newest first):
--'  190  0  ~/README.md
+-'  162  72  ~/README.md
 -'  1  0  ~/README.md
--'  188  25  ~/README.md
+-'  191  0  ~/README.md
+-'  189  25  ~/README.md
 -'  123  0  ~/README.md
--'  174  0  ~/README.md
+-'  175  0  ~/README.md
 -'  8  0  ~/docker-flask-project
 -'  130  50  ~/README.md
 -'  33  28  ~/docker-flask-project/app/consumer.py
@@ -191,9 +192,9 @@ $
 # History of marks within files (newest to oldest):
 
 > ~/README.md
-	"	190	0
-	^	190	0
-	.	189	0
+	"	162	72
+	^	162	73
+	.	162	72
 	+	78	0
 	+	1	6
 	+	2	6
@@ -217,24 +218,25 @@ $
 	+	128	0
 	+	42	51
 	+	43	0
-	+	162	109
+	+	163	109
 	+	130	50
-	+	173	0
-	+	165	0
-	+	167	0
-	+	169	0
-	+	171	0
+	+	174	0
+	+	166	0
+	+	168	0
+	+	170	0
+	+	172	0
 	+	122	35
 	+	108	0
 	+	123	0
-	+	183	15
-	+	181	22
-	+	188	5
-	+	187	18
-	+	188	26
-	+	188	70
-	+	188	0
+	+	184	15
+	+	182	22
+	+	189	5
+	+	188	18
+	+	189	26
+	+	189	70
 	+	189	0
+	+	190	0
+	+	162	72
 
 > ~/docker-flask-project/app/consumer.py
 	"	33	28

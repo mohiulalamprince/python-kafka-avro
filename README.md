@@ -159,6 +159,7 @@ sudo docker run \
   kafka-topics --describe --topic mytopic --zookeeper localhost:32181
 ## MYSQL 
 
+sudo docker --name db -e MYSQL_ROOT_PASSWORD=test -d -p 3306:3306 mariadb
 sudo docker run --name mysql-client -it --link db:mysql --rm mariadb sh -c 'exec mysql -uroot -ptest -hmysql'
 
 show databases;
