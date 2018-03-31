@@ -7,27 +7,45 @@
 
 # hlsearch on (H) or off (h):
 ~h
+# Last Search Pattern:
+~MSle0~/logg
+
 # Last Substitute Search Pattern:
-~MSle0~&####
+~MSle0&overlay
 
 # Last Substitute String:
-$##
+$
 
 # Command Line History (newest to oldest):
-:x
-:wa
 :q
+:wa
+:x
+:new main.py
+:cx
+:new EmailManager.py
+:%s/overlay/host/g
+:%s/host/overlay/g
+:xz
+:%s/bridge/host/g
+:%s/mybridge/host/g
+:new app/main.py
+:new app/AvroProducer.py
 :%s/####/##/g
 :%s/######/####/g
 :%s/###/######/g
 :%s/#/###/g
 
 # Search String History (newest to oldest):
+?/logg
+? @$
+? overlay
+? host
+? bridge
+? mybridge
 ? ####
 ? ######
 ? ###
 ? #
-? @$
 
 # Expression History (newest to oldest):
 
@@ -36,39 +54,132 @@ $##
 # Input Line History (newest to oldest):
 
 # Registers:
-""0	LINE	0
-	@app.route("/order")
-	def hello():
-	    return "Hey I'm using Docker!"
+"0	LINE	0
+	                return False, "SMTP_SERVER not found"
 "1	LINE	0
-	
+		data = str(json.loads(msg.value)['orderstatus'])
 "2	LINE	0
-	producer.py
+		print data
 "3	LINE	0
-	consumer.py
-"-	CHAR	0
-	0
+	
+"4	LINE	0
+	
+"5	LINE	0
+		data = str(json.loads(json.dumps(msg.value)['orderstatus']))
+"6	LINE	0
+			data =  at " + str(datetime.utcnow()) 
+"7	LINE	0
+	    try:
+		print "writing inside mysql"
+	    	engine = create_engine("mysql+pymysql://root:test@localhost/testdb?host=localhost?port=3306")
+	    	conn = engine.connect()
+	    	conn.execute('insert into shipmentorder values(0, "testout")')
+		conn.close()
+		print "writing end inside mysql"
+	    except:
+		print "exception inside mysql"
+"8	LINE	0
+		print sys.exec_info()[1]
+"9	LINE	0
+		import sys
+""-	CHAR	0
+	 
 
 # File marks:
-'0  48  0  ~/README.md
-'1  115  0  ~/README.md
-'2  7  8  ~/docker-flask-project/app/main.py
-'3  1  0  ~/docker-flask-project/Dockerfile
-'4  3  0  ~/docker-flask-project/app/main.py
-'5  3  28  ~/cp-docker-images/examples/kafka-single-node/AvroProducer.py
-'6  1  0  ~/cp-docker-images/examples/kafka-single-node/AvroPo
-'7  33  8  ~/cp-docker-images/examples/kafka-single-node/AvroConsumer.py
-'8  7  40  ~/cp-docker-images/examples/kafka-single-node/AvroConsumer.py
-'9  40  48  ~/cp-docker-images/examples/kafka-single-node/AvroProducer.py
+'0  33  28  ~/docker-flask-project/app/consumer.py
+'1  34  10  ~/docker-flask-project/app/consumer.py
+'2  17  0  ~/docker-flask-project/app/main.py
+'3  36  84  ~/docker-flask-project/app/consumer.py
+'4  22  62  ~/docker-flask-project/app/consumer.py
+'5  22  89  ~/docker-flask-project/app/consumer.py
+'6  14  24  ~/docker-flask-project/app/EmailManager.py
+'7  4  0  ~/docker-flask-project/app/TestMaria.py
+'8  22  0  ~/docker-flask-project/app/consumer.py
+'9  19  0  ~/docker-flask-project/app/main.py
 
 # Jumplist (newest first):
--'  48  0  ~/README.md
--'  1  0  ~/README.md
--'  115  0  ~/README.md
--'  7  8  ~/docker-flask-project/app/main.py
+-'  33  28  ~/docker-flask-project/app/consumer.py
+-'  1  0  ~/docker-flask-project/app/consumer.py
+-'  34  10  ~/docker-flask-project/app/consumer.py
+-'  17  0  ~/docker-flask-project/app/main.py
 -'  1  0  ~/docker-flask-project/app/main.py
+-'  36  84  ~/docker-flask-project/app/consumer.py
+-'  37  4  ~/docker-flask-project/app/consumer.py
+-'  22  62  ~/docker-flask-project/app/consumer.py
+-'  14  24  ~/docker-flask-project/app/EmailManager.py
+-'  1  0  ~/docker-flask-project/app/EmailManager.py
+-'  4  0  ~/docker-flask-project/app/TestMaria.py
+-'  1  0  ~/docker-flask-project/app/TestMaria.py
+-'  19  0  ~/docker-flask-project/app/main.py
+-'  42  1  ~/docker-flask-project/app/consumer.py
+-'  28  27  ~/docker-flask-project/app/consumer.py
+-'  77  0  ~/docker-flask-project/app/EmailManager.py
+-'  14  34  ~/docker-flask-project/app/testsmtp.py
+-'  1  0  ~/docker-flask-project/app/testsmtp.py
+-'  20  35  ~/docker-flask-project/app/testsmtp.py
+-'  10  19  ~/docker-flask-project/app/testsmtp.py
+-'  1  0  ~/docker-flask-project/app/testsmtp
+-'  3  0  ~/docker-flask-project/app/consumer.py
+-'  11  23  ~/docker-flask-project/app/EmailManager.py
+-'  30  0  ~/docker-flask-project/app/testsmtp.py
+-'  28  47  ~/docker-flask-project/app/testsmtp.py
+-'  54  49  ~/docker-flask-project/app/EmailManager.py
+-'  7  42  ~/docker-flask-project/app/TestSmtp.py
+-'  1  0  ~/docker-flask-project/app/TestSmtp.py
+-'  1  0  ~/docker-flask-project/app/python
+-'  12  17  ~/docker-flask-project/app/EmailManager.py
+-'  57  16  ~/docker-flask-project/app/EmailManager.py
+-'  58  11  ~/docker-flask-project/app/EmailManager.py
+-'  13  44  ~/docker-flask-project/app/EmailManager.py
+-'  60  28  ~/docker-flask-project/app/EmailManager.py
+-'  8  0  ~/docker-flask-project/app/EmailManager.py
+-'  47  21  ~/docker-flask-project/app/EmailManager.py
+-'  16  12  ~/docker-flask-project/app/EmailManager.py
+-'  78  57  ~/docker-flask-project/app/EmailManager.py
+-'  2  34  ~/docker-flask-project/app/consumer.py
+-'  24  0  ~/docker-flask-project/app/consumer.py
+-'  22  0  ~/docker-flask-project/app/main.py
+-'  8  10  ~/docker-flask-project/app/main.py
+-'  14  1  ~/docker-flask-project/app/main.py
+-'  16  19  ~/docker-flask-project/app/main.py
+-'  28  7  ~/docker-flask-project/app/main.py
+-'  25  0  ~/docker-flask-project/app/main.py
+-'  18  45  ~/docker-flask-project/app/main.py
+-'  31  26  ~/docker-flask-project/app/main.py
+-'  6  4  ~/docker-flask-project/app/requirements.txt
+-'  1  0  ~/docker-flask-project/app/requirements.txt
+-'  7  0  ~/.git
+-'  25  0  ~/.git
+-'  1  0  ~/docker-flask-project
+-'  13  0  ~/docker-flask-project/app/requirements.txt
+-'  25  0  ~/cp-docker-images/examples/kafka-single-node/docker-compose.yml
+-'  1  0  ~/cp-docker-images/examples/kafka-single-node/docker-compose.yml
+-'  26  7  ~/cp-docker-images/examples/kafka-single-node/docker-compose.yml
+-'  6  11  ~/cp-docker-images/examples/kafka-single-node/docker-compose.yml
+-'  23  4  ~/cp-docker-images/examples/kafka-single-node/docker-compose.yml
+-'  3  0  ~/cp-docker-images/examples/kafka-single-node/docker-compose.yml
+-'  4  0  ~/cp-docker-images/examples/kafka-single-node/docker-compose.yml
+-'  15  4  ~/cp-docker-images/examples/kafka-single-node/docker-compose.yml
+-'  5  39  ~/docker-flask-project/Dockerfile
 -'  1  0  ~/docker-flask-project/Dockerfile
--'  3  0  ~/docker-flask-project/app/main.py
+-'  10  0  ~/docker-flask-project/Dockerfile
+-'  1  0  /etc/hosts
+-'  16  19  ~/docker-flask-project/Dockerfile
+-'  7  9  ~/docker-flask-project/Dockerfile
+-'  29  0  ~/docker-flask-project/app/main.py
+-'  17  9  ~/docker-flask-project/Dockerfile
+-'  14  0  ~/docker-flask-project/Dockerfile
+-'  12  11  ~/docker-flask-project/Dockerfile
+-'  9  0  ~/docker-flask-project/Dockerfile
+-'  5  16  ~/docker-flask-project/shell-script.sh
+-'  1  0  ~/docker-flask-project/shell-script.sh
+-'  3  32  ~/docker-flask-project/Dockerfile
+-'  3  0  ~/docker-flask-project/requirements.txt
+-'  1  0  ~/docker-flask-project/requirements.txt
+-'  1  0  ~/docker-flask-project/app/producer.py
+-'  12  0  ~/docker-flask-project/app/main.py
+-'  13  8  ~/docker-flask-project/app/main.py
+-'  7  0  ~/docker-flask-project/app/main.py
 -'  3  28  ~/cp-docker-images/examples/kafka-single-node/AvroProducer.py
 -'  1  0  ~/cp-docker-images/examples/kafka-single-node/AvroProducer.py
 -'  1  0  ~/cp-docker-images/examples/kafka-single-node/AvroPo
@@ -77,91 +188,335 @@ $##
 -'  7  40  ~/cp-docker-images/examples/kafka-single-node/AvroConsumer.py
 -'  40  48  ~/cp-docker-images/examples/kafka-single-node/AvroProducer.py
 -'  43  30  ~/cp-docker-images/examples/kafka-single-node/AvroProducer.py
--'  4  0  ~/docker-flask-project/Dockerfile
 -'  10  47  ~/app/main.py
 -'  1  0  ~/app/main.py
 -'  2  0  ~/requirements.txt
 -'  1  0  ~/requirements.txt
--'  87  0  ~/README.md
--'  97  0  ~/README.md
--'  91  0  ~/bootstrap.sh
--'  1  0  ~/bootstrap.sh
--'  9  17  ~/.gitignore
--'  1  0  ~/.gitignore
--'  78  0  ~/README.md
--'  8  20  ~/.gitignore
--'  8  0  ~/.git
--'  5  15  ~/producer.py
--'  1  0  ~/producer.py
--'  6  23  ~/producer.py
--'  3  105  ~/producer.py
--'  5  34  ~/consumer.py
--'  1  0  ~/consumer.py
--'  8  44  ~/producer.py
--'  6  0  ~/consumer.py
--'  26  8  ~/consumer.py
--'  13  8  ~/producer.py
--'  25  0  ~/cp-docker-images/examples/kafka-single-node/docker-compose.yml
--'  1  0  ~/cp-docker-images/examples/kafka-single-node/docker-compose.yml
--'  45  8  ~/TestEventify.py
--'  1  0  ~/TestEventify.py
--'  45  8  ~/TestEventify.py
--'  1  0  ~/TestEventify.py
--'  25  0  ~/cp-docker-images/examples/kafka-single-node/docker-compose.yml
--'  1  0  ~/cp-docker-images/examples/kafka-single-node/docker-compose.yml
--'  45  8  ~/TestEventify.py
--'  1  0  ~/TestEventify.py
--'  45  8  ~/TestEventify.py
--'  1  0  ~/TestEventify.py
--'  25  0  ~/cp-docker-images/examples/kafka-single-node/docker-compose.yml
--'  1  0  ~/cp-docker-images/examples/kafka-single-node/docker-compose.yml
--'  45  8  ~/TestEventify.py
--'  1  0  ~/TestEventify.py
--'  45  8  ~/TestEventify.py
--'  1  0  ~/TestEventify.py
--'  25  0  ~/cp-docker-images/examples/kafka-single-node/docker-compose.yml
--'  1  0  ~/cp-docker-images/examples/kafka-single-node/docker-compose.yml
--'  45  8  ~/TestEventify.py
--'  1  0  ~/TestEventify.py
--'  45  8  ~/TestEventify.py
--'  1  0  ~/TestEventify.py
--'  11  8  ~/producer.py
--'  25  0  ~/cp-docker-images/examples/kafka-single-node/docker-compose.yml
--'  1  0  ~/cp-docker-images/examples/kafka-single-node/docker-compose.yml
--'  45  8  ~/TestEventify.py
--'  1  0  ~/TestEventify.py
--'  45  8  ~/TestEventify.py
--'  1  0  ~/TestEventify.py
--'  25  0  ~/cp-docker-images/examples/kafka-single-node/docker-compose.yml
--'  1  0  ~/cp-docker-images/examples/kafka-single-node/docker-compose.yml
--'  45  8  ~/TestEventify.py
--'  1  0  ~/TestEventify.py
--'  45  8  ~/TestEventify.py
--'  1  0  ~/TestEventify.py
--'  25  0  ~/cp-docker-images/examples/kafka-single-node/docker-compose.yml
--'  1  0  ~/cp-docker-images/examples/kafka-single-node/docker-compose.yml
--'  45  8  ~/TestEventify.py
--'  1  0  ~/TestEventify.py
--'  45  8  ~/TestEventify.py
--'  1  0  ~/TestEventify.py
--'  25  0  ~/cp-docker-images/examples/kafka-single-node/docker-compose.yml
--'  1  0  ~/cp-docker-images/examples/kafka-single-node/docker-compose.yml
--'  45  8  ~/TestEventify.py
--'  1  0  ~/TestEventify.py
--'  45  8  ~/TestEventify.py
--'  1  0  ~/TestEventify.py
--'  25  0  ~/cp-docker-images/examples/kafka-single-node/docker-compose.yml
--'  1  0  ~/cp-docker-images/examples/kafka-single-node/docker-compose.yml
--'  45  8  ~/TestEventify.py
--'  1  0  ~/TestEventify.py
--'  45  8  ~/TestEventify.py
--'  1  0  ~/TestEventify.py
--'  25  0  ~/cp-docker-images/examples/kafka-single-node/docker-compose.yml
--'  1  0  ~/cp-docker-images/examples/kafka-single-node/docker-compose.yml
--'  45  8  ~/TestEventify.py
--'  1  0  ~/TestEventify.py
+-'  82  0  ~/README.md
+-'  1  0  ~/README.md
+-'  17  0  ~/docker-flask-project/app/main.py
+-'  1  0  ~/docker-flask-project/app/main.py
 
 # History of marks within files (newest to oldest):
+
+> ~/docker-flask-project/app/consumer.py
+	"	33	28
+	^	37	13
+	.	36	60
+	+	2	34
+	+	28	25
+	+	3	0
+	+	28	31
+	+	17	0
+	+	3	36
+	+	18	0
+	+	42	72
+	+	42	4
+	+	18	0
+	+	42	3
+	+	42	3
+	+	42	20
+	+	42	0
+	+	42	17
+	+	42	7
+	+	42	4
+	+	42	4
+	+	42	4
+	+	42	23
+	+	42	10
+	+	42	68
+	+	42	12
+	+	42	28
+	+	42	32
+	+	42	0
+	+	20	4
+	+	21	3
+	+	22	0
+	+	22	0
+	+	22	0
+	+	22	0
+	+	22	0
+	+	22	0
+	+	22	0
+	+	22	72
+	+	22	0
+	+	22	78
+	+	22	0
+	+	22	62
+	+	6	11
+	+	6	11
+	+	7	0
+	+	22	0
+	+	30	4
+	+	32	3
+	+	36	99
+	+	37	0
+	+	36	64
+	+	33	60
+	+	36	64
+	+	33	0
+	+	34	0
+	+	40	42
+	+	31	12
+	+	42	0
+	+	34	10
+	+	22	0
+	+	34	0
+	+	36	81
+	+	4	29
+	+	34	32
+	+	36	71
+	+	34	0
+	+	36	60
+
+> ~/docker-flask-project/app/main.py
+	"	17	0
+	.	17	0
+	+	12	17
+	+	25	0
+	+	26	13
+	+	23	32
+	+	2	29
+	+	13	8
+	+	17	0
+	+	23	4
+	+	18	45
+	+	17	17
+	+	18	41
+	+	17	3
+	+	20	10
+	+	17	1
+	+	31	26
+	+	18	45
+	+	12	26
+	+	13	15
+	+	17	22
+	+	17	25
+	+	17	33
+	+	17	31
+	+	17	73
+	+	17	19
+	+	19	0
+	+	17	0
+	+	17	26
+	+	17	0
+	+	17	0
+	+	17	0
+	+	17	0
+	+	3	0
+	+	19	0
+	+	20	0
+	+	12	27
+	+	5	24
+	+	20	10
+	+	13	12
+	+	16	19
+	+	17	54
+	+	16	20
+	+	17	39
+	+	16	8
+	+	14	10
+	+	16	19
+	+	17	0
+	+	24	39
+	+	6	25
+	+	22	62
+	+	23	11
+	+	24	11
+	+	24	0
+	+	24	90
+	+	24	0
+	+	22	7
+	+	23	0
+	+	8	10
+	+	17	0
+
+> ~/docker-flask-project/app/EmailManager.py
+	"	14	24
+	^	14	25
+	.	14	24
+	+	77	0
+	+	24	0
+	+	41	23
+	+	11	46
+	+	12	24
+	+	11	49
+	+	12	34
+	+	13	27
+	+	78	57
+	+	62	0
+	+	65	0
+	+	67	0
+	+	11	31
+	+	13	0
+	+	11	0
+	+	47	0
+	+	20	0
+	+	24	13
+	+	34	13
+	+	47	13
+	+	57	10
+	+	59	14
+	+	13	44
+	+	58	11
+	+	57	5
+	+	65	21
+	+	57	0
+	+	13	41
+	+	54	40
+	+	14	24
+	+	54	37
+	+	57	0
+	+	58	0
+	+	59	0
+	+	47	0
+	+	34	0
+	+	24	0
+	+	67	17
+	+	14	26
+	+	54	49
+	+	12	24
+	+	11	24
+	+	78	0
+	+	13	26
+	+	14	24
+
+> ~/docker-flask-project/app/TestMaria.py
+	"	4	0
+	^	4	20
+	.	4	0
+	+	7	0
+	+	4	0
+
+> ~/docker-flask-project/app/testsmtp.py
+	"	14	34
+	^	14	35
+	.	14	37
+	+	39	0
+	+	1	0
+	+	22	0
+	+	1	11
+	+	31	0
+	+	29	30
+	+	30	36
+	+	31	18
+	+	28	47
+	+	1	14
+	+	20	36
+	+	5	23
+	+	14	54
+	+	14	0
+	+	14	0
+	+	14	14
+	+	7	12
+	+	9	2
+	+	10	42
+	+	5	13
+	+	4	0
+	+	19	0
+	+	20	0
+	+	17	31
+	+	20	7
+	+	10	49
+	+	14	37
+
+> ~/docker-flask-project/app/testsmtp
+	"	1	0
+
+> ~/docker-flask-project/app/TestSmtp.py
+	"	7	42
+	^	7	43
+	.	7	42
+	+	11	0
+	+	2	29
+	+	3	37
+	+	5	19
+	+	6	22
+	+	7	42
+
+> ~/docker-flask-project/app/python
+	"	1	0
+
+> ~/docker-flask-project/app/requirements.txt
+	"	6	4
+	^	6	5
+	.	6	4
+	+	12	0
+	+	6	4
+
+> ~/cp-docker-images/examples/kafka-single-node/docker-compose.yml
+	"	25	0
+	.	26	0
+	+	6	25
+	+	15	25
+	+	15	0
+	+	6	23
+	+	15	23
+	+	6	0
+	+	26	0
+	+	24	24
+	+	15	23
+	+	6	23
+	+	15	11
+	+	6	14
+	+	7	7
+	+	16	7
+	+	7	0
+	+	6	21
+	+	15	21
+	+	16	0
+	+	26	0
+
+> ~/docker-flask-project/Dockerfile
+	"	5	39
+	^	5	40
+	.	5	39
+	+	3	0
+	+	1	0
+	+	2	4
+	+	1	0
+	+	3	0
+	+	3	0
+	+	3	11
+	+	3	21
+	+	17	0
+	+	3	21
+	+	7	0
+	+	7	0
+	+	17	0
+	+	9	0
+	+	15	0
+	+	14	0
+	+	10	92
+	+	11	28
+	+	12	29
+	+	13	11
+	+	14	0
+	+	17	0
+	+	7	9
+	+	16	19
+	+	5	39
+
+> /etc/hosts
+	"	1	0
+
+> ~/docker-flask-project/shell-script.sh
+	"	5	16
+	^	5	17
+	.	5	0
+	+	5	0
+
+> ~/docker-flask-project/requirements.txt
+	"	3	0
+	^	3	0
+	.	2	23
+	+	2	23
+
+> ~/docker-flask-project/app/producer.py
+	"	1	0
+
+> ~/docker-flask-project/app/AvroProducer.py
+	"	41	0
 
 > ~/README.md
 	"	48	0
@@ -190,26 +545,6 @@ $##
 	+	114	0
 	+	42	51
 	+	43	0
-
-> ~/docker-flask-project/app/main.py
-	"	7	8
-	^	7	9
-	.	7	8
-	+	6	17
-	+	9	0
-	+	10	13
-	+	8	32
-	+	2	29
-	+	7	8
-
-> ~/docker-flask-project/Dockerfile
-	"	1	0
-	^	1	1
-	.	1	0
-	+	3	0
-	+	1	0
-	+	2	4
-	+	1	0
 
 > ~/cp-docker-images/examples/kafka-single-node/AvroProducer.py
 	"	3	28
@@ -307,9 +642,6 @@ $##
 	.	5	34
 	+	26	0
 	+	5	34
-
-> ~/cp-docker-images/examples/kafka-single-node/docker-compose.yml
-	"	25	0
 
 > ~/TestEventify.py
 	"	45	8
