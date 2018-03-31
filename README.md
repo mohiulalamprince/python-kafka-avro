@@ -113,3 +113,37 @@ sudo docker build -t simple-flask .
 sudo docker run -p 80:80 -t simple-flask 
 
 
+## how to run kafka using docker not docker-compose
+sudo docker run -d \
+    --net=host \
+    --name=kafka \
+    -e KAFKA_ZOOKEEPER_CONNECT=localhost:32181 \
+    -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://localhost:29092 \
+    -e KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1 \
+    confluentinc/cp-kafka:4.0.0
+
+sudo docker run -d \
+    --net=host \
+    --name=zookeeper \
+    -e ZOOKEEPER_CLIENT_PORT=32181 \
+    confluentinc/cp-zookeeper:4.0.0
+
+sudo docker run \
+  --net=host \
+  --rm confluentinc/cp-kafka:4.0.0 \
+  kafka-topics --create --topic mytopic --partitions 1 --replication-factor 1 --if-not-exists --zookeeper localhost:32181
+
+sudo docker run \
+  --net=host \
+  --rm confluentinc/cp-kafka:4.0.0 \
+  kafka-topics --create --topic mytopic --partitions 1 --replication-factor 1 --if-not-exists --zookeeper localhost:32181
+
+sudo docker run \
+  --net=host \
+  --rm \
+  confluentinc/cp-kafka:4.0.0 \
+  kafka-topics --describe --topic mytopic --zookeeper localhost:32181
+## MYSQL 
+
+sudo docker run --name mysql-client -it --link db:mysql --rm mariadb sh -c 'exec mysql -uroot -ptest -hmysql'
+
