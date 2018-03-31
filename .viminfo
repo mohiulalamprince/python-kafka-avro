@@ -57,49 +57,43 @@ $
 "0	CHAR	0
 	 
 ""1	LINE	0
-	'
+	curl 127.0.0.1:5000/order dd
 "2	LINE	0
-	COPY ./app /app
+	'
 "3	LINE	0
-		data = str(json.loads(msg.value)['orderstatus'])
+	COPY ./app /app
 "4	LINE	0
-		print data
+		data = str(json.loads(msg.value)['orderstatus'])
 "5	LINE	0
-	
+		print data
 "6	LINE	0
 	
 "7	LINE	0
-		data = str(json.loads(json.dumps(msg.value)['orderstatus']))
+	
 "8	LINE	0
-			data =  at " + str(datetime.utcnow()) 
+		data = str(json.loads(json.dumps(msg.value)['orderstatus']))
 "9	LINE	0
-	    try:
-		print "writing inside mysql"
-	    	engine = create_engine("mysql+pymysql://root:test@localhost/testdb?host=localhost?port=3306")
-	    	conn = engine.connect()
-	    	conn.execute('insert into shipmentorder values(0, "testout")')
-		conn.close()
-		print "writing end inside mysql"
-	    except:
-		print "exception inside mysql"
+			data =  at " + str(datetime.utcnow()) 
 "-	CHAR	0
 	 
 
 # File marks:
-'0  123  0  ~/README.md
-'1  174  0  ~/README.md
-'2  8  0  ~/docker-flask-project
-'3  130  50  ~/README.md
-'4  33  28  ~/docker-flask-project/app/consumer.py
-'5  34  10  ~/docker-flask-project/app/consumer.py
-'6  17  0  ~/docker-flask-project/app/main.py
-'7  36  84  ~/docker-flask-project/app/consumer.py
-'8  22  62  ~/docker-flask-project/app/consumer.py
-'9  22  89  ~/docker-flask-project/app/consumer.py
+'0  190  0  ~/README.md
+'1  188  25  ~/README.md
+'2  123  0  ~/README.md
+'3  174  0  ~/README.md
+'4  8  0  ~/docker-flask-project
+'5  130  50  ~/README.md
+'6  33  28  ~/docker-flask-project/app/consumer.py
+'7  34  10  ~/docker-flask-project/app/consumer.py
+'8  17  0  ~/docker-flask-project/app/main.py
+'9  36  84  ~/docker-flask-project/app/consumer.py
 
 # Jumplist (newest first):
--'  123  0  ~/README.md
+-'  190  0  ~/README.md
 -'  1  0  ~/README.md
+-'  188  25  ~/README.md
+-'  123  0  ~/README.md
 -'  174  0  ~/README.md
 -'  8  0  ~/docker-flask-project
 -'  130  50  ~/README.md
@@ -193,16 +187,13 @@ $
 -'  40  48  ~/cp-docker-images/examples/kafka-single-node/AvroProducer.py
 -'  43  30  ~/cp-docker-images/examples/kafka-single-node/AvroProducer.py
 -'  10  47  ~/app/main.py
--'  1  0  ~/app/main.py
--'  2  0  ~/requirements.txt
--'  160  0  ~/README.md
 
 # History of marks within files (newest to oldest):
 
 > ~/README.md
-	"	123	0
-	^	123	1
-	.	123	0
+	"	190	0
+	^	190	0
+	.	189	0
 	+	78	0
 	+	1	6
 	+	2	6
@@ -236,6 +227,14 @@ $
 	+	122	35
 	+	108	0
 	+	123	0
+	+	183	15
+	+	181	22
+	+	188	5
+	+	187	18
+	+	188	26
+	+	188	70
+	+	188	0
+	+	189	0
 
 > ~/docker-flask-project/app/consumer.py
 	"	33	28

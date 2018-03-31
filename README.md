@@ -171,4 +171,20 @@ show tables;
 
 MariaDB [testdb]> create table shipmentorder(order_id INT NOT NULL AUTO_INCREMENT, orderstatus VARCHAR(64) NOT NULL, PRIMARY KEY(order_id));
 
+## How to run the flask app from the console
+
+cd docker-flask-project/app/
+flask run
+
+
+## How to run the consumer
+source env/bin/activate
+cd docker-flask-project/app
+python consumer
+
+## How to check the basic features
+
+curl 127.0.0.1:5000
+curl -H "Content-type: application/json" -X POST http://127.0.0.1:5000/order -d '{"orderstatus":"shipped"}'
+
 
