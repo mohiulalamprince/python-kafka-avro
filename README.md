@@ -1,4 +1,4 @@
-#Note: Do not use the inital consumer, producer, AvroConsumer, AvroProducer of my github root directory files. Just try to use this folder location docker-flask-project/app/. You will get the same file named consumer, producer, AvroConsumer, AvroProducer.
+# Note: Do not use the inital consumer, producer, AvroConsumer, AvroProducer of my github root directory files. Just try to use this folder location docker-flask-project/app/. You will get the same file named consumer, producer, AvroConsumer, AvroProducer.
 
 ## Install virtual box from internet
 ## Then vagrant and I am using mac
